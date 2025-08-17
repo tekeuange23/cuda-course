@@ -14,8 +14,12 @@ int main() {
     // size_t
     size_t size = sizeof(arr) / sizeof(arr[0]);
     printf("Size of arr: %zu\n", size);  // Output: 5
-    printf("size of size_t: %zu\n", sizeof(size_t));  // Output: 8 (bytes) -> 64 bits which is memory safe
-    printf("int size in bytes: %zu\n", sizeof(int));  // Output: 4 (bytes) -> 32 bits
+    printf("size_t size: %zu byte(s)\n", sizeof(size_t));  // Output: 8 (bytes) -> 64 bits which is memory safe
+    printf("char   size: %zu byte(s)\n", sizeof(char));    // Output: 1 (byte) -> 8 bits
+    printf("int    size: %zu byte(s)\n", sizeof(int));     // Output: 4 (bytes) -> 32 bits
+    printf("float  size: %zu byte(s)\n", sizeof(float));   // Output: 4 (bytes) -> 32 bits
+    printf("long   size: %zu byte(s)\n", sizeof(long));    // Output: 8 (bytes) -> 64 bits
+    printf("double size: %zu byte(s)\n", sizeof(double));  // Output: 8 (bytes) -> 64 bits
     // z -> size_t
     // u -> unsigned int
     // %zu -> size_t

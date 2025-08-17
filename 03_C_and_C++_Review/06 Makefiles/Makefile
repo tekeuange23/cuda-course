@@ -2,7 +2,8 @@
 
 GCC = gcc
 NVCC = nvcc
-CUDA_FLAGS = -arch=sm_86
+CUDA_FLAGS_0 = -ccbin /usr/bin/g++-11
+CUDA_FLAGS_1 = -arch=sm_86
 
 01:
 	@$(GCC) -o 01 01.c
@@ -22,7 +23,7 @@ CUDA_FLAGS = -arch=sm_86
 	@$(GCC) -o 02 02.c
 
 03: 
-	@$(NVCC) $(CUDA_FLAGS) -o 03_cu 03.cu
+	@$(NVCC) $(CUDA_FLAGS_0) $(CUDA_FLAGS_1) -o 03_cu 03.cu
 
 clean: 
 	rm -f 01 02 03_cu *.o
